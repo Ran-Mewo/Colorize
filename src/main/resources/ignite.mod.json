@@ -1,14 +1,11 @@
 {
-  "id": "example",
+  "id": "colorizer",
   "version": "${version}",
-  "entry": "org.example.ignite.ExampleMod",
+  "entry": "io.github.ran.colorize.Colorize",
   "dependencies": [
     "ignite"
   ],
   "mixins": [
-    "mixins.example.json"
-  ],
-  "access_widener": [
-    "example-obf.accesswidener"
+    "mixins.colorizer.json"
   ]
 }

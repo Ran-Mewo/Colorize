@@ -25,21 +25,15 @@ configurations {
 dependencies {
     // Ignite & Spigot
     remapLib "org.spigotmc:spigot:${project.spigot_version}:remapped-mojang"
-    accessWidener fileTree(dir: 'src/main/resources', include: ['*.accesswidener']) // This doesn't support multiple access wideners
     implementation "space.vectrix.ignite:ignite-api:${project.ignite_version}"
     implementation "org.spongepowered:mixin:${project.mixin_version}"
 
-    // Dependencies (You can put the dependencies in the jar by using the shade configuration)
-      // Example: shade "com.google.code.gson:gson:2.8.9"
+    shade 'com.diogonunes:JColor:5.2.0'
 }
 
 spigot {
     version = project.minecraft_version
 }
-
-
-
-// You usually don't need to change anything below this line
 
 processResources {
     inputs.property "version", project.version
