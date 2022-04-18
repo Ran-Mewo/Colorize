@@ -12,6 +12,7 @@ repositories {
     mavenCentral()
     maven { url = 'https://repo.spongepowered.org/maven' }
     maven { url = "https://maven.elmakers.com/repository/" }
+    maven { url = "https://jitpack.io" }
     mavenLocal()
 }
 
@@ -28,7 +29,9 @@ dependencies {
     implementation "space.vectrix.ignite:ignite-api:${project.ignite_version}"
     implementation "org.spongepowered:mixin:${project.mixin_version}"
 
-    shade 'com.diogonunes:JColor:5.2.0'
+    shade("com.github.Ran-helo:Ranitils:f10fa89021") {
+        exclude group: 'com.google.inject', module: 'guice'
+    }
 }
 
 spigot {
